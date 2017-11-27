@@ -20,4 +20,13 @@ page-checklist {
     ion-checkbox .item-inner {
         border-bottom: none !important;
     }
+
+    .fixed-content{
+        background-color: #156666;
+    }
+
+    [checked]{
+        background-color: #458E8E;
+
+    }
 }

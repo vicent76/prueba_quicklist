@@ -2,17 +2,24 @@ page-home {
     ion-item-sliding {
         margin: 5px;
     }
+
     [ion-item] {
         font-size: 1.2em;
         font-weight: bold;
         color: #282828;
         padding-top: 10px;
         padding-bottom: 10px;
+        background-color: #156666;
     }
     [ion-item] span {
         display: block;
-        color: #cecece;
+        color: #35A035;
         font-weight: 400;
         margin-top: 10px;
+        background-color: #156666;
+    }
+
+    .content-md{
+        background-color: #156666;
     }
 }
