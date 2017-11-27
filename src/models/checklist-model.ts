@@ -8,6 +8,7 @@ export class ChecklistModel{
     checklist: any;
     checklistObserver: any;
     fecha: string = 'Fecha creación '+moment(new Date).format('DD-MM-YYYY');
+    numero: number = this.cuentaCheck();
 
     constructor(public title: string, public items: any[]){
 
@@ -58,5 +59,10 @@ export class ChecklistModel{
 
     checklistUpdates(): Observable<any>{
         return this.checklist;
+    }
+
+    cuentaCheck(): number{
+        let numero = 0;
+        return numero;
     }
 }

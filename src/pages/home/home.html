@@ -15,7 +15,8 @@
       <button ion-item (click)="viewChecklist(checklist)">
         {{checklist.title}}<br>
         {{checklist.fecha}}
-        <span>{{checklist.items.lenght}} items</span>
+        <span>{{checklist.items.length}} items</span>
+        
       </button>
       <ion-item-options>
         <button ion-button icon-only color="light" (click)="renameChecklist(checklist)">
