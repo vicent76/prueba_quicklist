@@ -24,7 +24,8 @@ export class DataProvider {
     data.forEach((checklist) => {
     saveData.push({
     title: checklist.title,
-    items: checklist.items
+    items: checklist.items,
+    fecha: checklist.fecha
     });
     });
     let newData = JSON.stringify(saveData);

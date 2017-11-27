@@ -1,9 +1,13 @@
 import {Observable} from 'rxjs/Observable';
+import * as moment from 'moment';
+
+
 
 
 export class ChecklistModel{
     checklist: any;
     checklistObserver: any;
+    fecha: string = 'Fecha creación '+moment(new Date).format('DD-MM-YYYY');
 
     constructor(public title: string, public items: any[]){
 
@@ -44,6 +48,8 @@ export class ChecklistModel{
         this.title = title;
         this.checklistObserver.next(true);
     }
+
+   
 
     toggleItem(item): void{
         item.checked = !item.checked;

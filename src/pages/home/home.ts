@@ -71,6 +71,7 @@ export class HomePage {
         {
           text: 'Save',
           handler: data => {
+            
             let newChecklist = new ChecklistModel(data.name, []);
             this.checklists.push(newChecklist);
 
