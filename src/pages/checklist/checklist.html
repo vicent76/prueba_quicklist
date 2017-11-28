@@ -38,6 +38,15 @@
         </button>
       </ion-item-options>
     </ion-item-sliding>
+    
   </ion-list>
 
 </ion-content>
+<ion-footer  *ngFor="let item of checklist.items">
+  <ion-toolbar *ngIf="item.checked">
+    <ion-title>{{ itemCheched() }}/{{checklist.items.length}} Completados</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+

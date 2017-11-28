@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
 
 /**
  * Generated class for the ChecklistPage page.
@@ -15,10 +16,13 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 })
 export class ChecklistPage {
   checklist: any;
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
 
     this.checklist = this.navParams.get('checklist');
+    
+    
   }
 
   ionViewDidLoad() {
@@ -52,6 +56,15 @@ export class ChecklistPage {
 
   toggleItem(item): void{
     this.checklist.toggleItem(item);
+  }
+
+  itemCheched(): number{
+   let numero = 0;
+   for (let item of this.checklist.items){
+      if (item.checked) numero += 1;
+   }
+
+   return numero;
   }
 
   removeItem(item): void{
@@ -91,5 +104,4 @@ export class ChecklistPage {
       }
     });
   }
-
 }
