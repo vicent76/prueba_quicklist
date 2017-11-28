@@ -8,7 +8,7 @@ export class ChecklistModel{
     checklist: any;
     checklistObserver: any;
     fecha: string = 'Fecha creación '+moment(new Date).format('DD-MM-YYYY');
-    numero: number = this.cuentaCheck();
+    
 
     constructor(public title: string, public items: any[]){
 
@@ -22,7 +22,7 @@ export class ChecklistModel{
     addItem(item): void{
         this.items.push({
             title: item,
-            checked: false
+            checked: false,
         });
         this.checklistObserver.next(true);
     }
@@ -36,11 +36,12 @@ export class ChecklistModel{
         this.checklistObserver.next(true);
     }
 
-    renameItem(item, title): void{
+    renameItem(item, title, nota): void{
         let index = this.items.indexOf(item);
 
         if(index > -1){
             this.items[index].title = title;
+            this.items[index].nota = nota;
         }
         this.checklistObserver.next(true);
     }
@@ -61,8 +62,4 @@ export class ChecklistModel{
         return this.checklist;
     }
 
-    cuentaCheck(): number{
-        let numero = 0;
-        return numero;
-    }
 }

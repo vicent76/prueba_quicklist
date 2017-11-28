@@ -61,8 +61,8 @@ export class HomePage {
       message: 'Enter the name of your new checklist below',
       inputs:[
         {
-          name: 'name'
-        }
+          name: 'name',
+        },
       ],
       buttons: [
         {

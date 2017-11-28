@@ -75,11 +75,14 @@ export class ChecklistPage {
 
     let prompt = this.alertCtrl.create({
       title: 'Rename item',
-      message: 'Enter the new name of the task for this checklist below',
+      message: 'Enter the new name of the task for this checklist below and optionally some comments',
       inputs: [
         {
           name: 'name'
-        }
+        },
+        {
+          type: 'nota'
+        },
       ],
       buttons: [
         {
@@ -88,7 +91,7 @@ export class ChecklistPage {
         {
           text: 'Save',
           handler: data => {
-            this.checklist.renameItem(item, data.name);
+            this.checklist.renameItem(item, data.name, data.nota);
           }
         }
       ]
