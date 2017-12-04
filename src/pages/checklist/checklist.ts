@@ -81,7 +81,7 @@ export class ChecklistPage {
           name: 'name'
         },
         {
-          type: 'nota'
+          name: 'nota'
         },
       ],
       buttons: [
